@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+  <ion-header>
+  <ion-navbar color="dark">
+      <ion-title *ngIf="!isOn">    
+          <button ion-button menuToggle="left" start>
+          <ion-icon name="menu"></ion-icon>Search 
+        </button></ion-title>
+        <div id="search" class="search-button-star">
+      <ion-searchbar *ngIf="isOn"  (ionCancel)="onCancel($event)" animated="true"></ion-searchbar>
+    </div>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="toggleDetails()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+    </ion-buttons>
+
+    <button ion-button menuToggle="right" end>
+        <ion-icon name="menu"></ion-icon> 
+     </button>
+     
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+   <h1 style=" color: white;">Hello Search</h1>
+
+   <ion-list>
+
+      <ion-item color="dark2">
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="data.user_details['0'].user_name" ></ion-input>
+      </ion-item>
+  
+      <ion-item color="dark2">
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="data.user_details['0'].password" required></ion-input>
+      </ion-item>
+
+      <ion-item color="dark2">
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="data.user_details['0'].email" required></ion-input>
+        </ion-item>
+ 
+        <ion-item color="dark2">
+            <ion-label floating>Phone</ion-label>
+            <ion-input type="mobile" [(ngModel)]="data.user_details['0'].phone" required></ion-input>
+          </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" (click)="SignIn()">Sign In</button>
+    </div>
+</ion-content>
+  

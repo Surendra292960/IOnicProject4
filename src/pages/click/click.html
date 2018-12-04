@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title *ngIf="!isOn">    
+          <button ion-button menuToggle="left" start>
+          <ion-icon name="menu"></ion-icon>Accordion 
+        </button></ion-title>
+        <div id="search" class="search-button-star">
+      <ion-searchbar *ngIf="isOn"  (ionCancel)="onCancel($event)" animated="true"></ion-searchbar>
+    </div>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="toggleDetails()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+    </ion-buttons>
+
+    <button ion-button menuToggle="right" end>
+        <ion-icon name="menu"></ion-icon> 
+     </button>
+  </ion-navbar>
+  <ion-toolbar color="dark3" no-border class="scrollable-segments">
+      <ion-segment [(ngModel)]="segment">
+          <ion-segment-button value="all">
+              All
+          </ion-segment-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-segment-button value="test">
+              Recent1
+          </ion-segment-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-segment-button value="test2">
+              Recent2
+          </ion-segment-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-segment-button value="test3">
+              Recent3
+          </ion-segment-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+          <ion-segment-button value="test4">
+              Recent4
+          </ion-segment-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-list color="dark2">
+        <ion-list-header color="dark3">
+          Ionic 2 Accordion Example.
+        </ion-list-header>
+        <ion-item color="dark2" *ngFor="let d of data" >
+            <ion-icon color="primary" item-right [name]="d.icon" (click)="toggleDetails1(d)"></ion-icon>
+            {{d.title}}      
+            <div *ngIf="d.showDetails">{{d.details}}</div>
+        </ion-item>
+      </ion-list>
+
+</ion-content>

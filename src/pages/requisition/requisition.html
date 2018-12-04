@@ -1,0 +1,207 @@
+ <ion-header>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+  <ion-header>
+  <ion-navbar color="dark">
+      <ion-title *ngIf="!isOn">    
+          <button ion-button menuToggle="left" start>
+          <ion-icon name="menu"></ion-icon>Requisition 
+        </button></ion-title>
+        <div id="search" class="search-button-star">
+      <ion-searchbar *ngIf="isOn"  (ionCancel)="onCancel($event)" animated="true"></ion-searchbar>
+    </div>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="toggleDetails()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+    </ion-buttons>
+
+    <button ion-button menuToggle="right" end>
+        <ion-icon name="menu"></ion-icon> 
+     </button>
+     
+  </ion-navbar>
+  <ion-toolbar color="dark2">
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-down"></ion-icon>Requisition #F7154310
+      </button>
+    </ion-buttons>
+  
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="toggle()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header> 
+
+
+<ion-content padding>
+
+<ion-grid class="secondry-content">
+    <ion-row>
+        <ion-col>
+            <ion-item class="secondry-content">
+                <ion-label stacked>Load Type</ion-label>
+                <ion-input type="text"  placeholder="Fluid" [(ngModel)]="m"></ion-input>
+                <ion-select interface="popover" [(ngModel)]="n">
+                    <ion-option value="Fluid">Fluid</ion-option>
+                    <ion-option value="20">20</ion-option>
+                </ion-select>
+            </ion-item>
+              
+              <ion-item class="secondry-content">
+                <ion-label stacked>Haul Type</ion-label>
+                <!-- <ion-input type="text"  placeholder="Haul Out"></ion-input> -->
+                <ion-select  placeholder="Haul Out" interface="popover" [(ngModel)]="o">
+                    <ion-option value="Haul Out">Haul Out</ion-option>
+                    <ion-option value="20">20</ion-option>
+                </ion-select>
+              </ion-item>
+
+
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>Product Type</ion-label>
+                  <!-- <ion-input type="email"  placeholder="Clean Oil"></ion-input> -->
+                  <ion-select  placeholder="Clean Oil" interface="popover" [(ngModel)]="p">
+                      <ion-option value="Clean Oil">Clean Oil</ion-option>
+                      <ion-option value="20">20</ion-option>
+                  </ion-select>
+                </ion-item>
+              
+              <ion-item class="secondry-content">
+                <ion-label stacked>Location Owner</ion-label>
+                <ion-input color="primary" type="text"  placeholder="Vast Energy Corp" [(ngModel)]="q"></ion-input>
+              </ion-item>
+              
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>Consigner</ion-label>
+                  <ion-input type="text" placeholder="Jack Daniel" [(ngModel)]="r"></ion-input>
+              </ion-item>
+
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>From Location</ion-label>
+                  <ion-input type="text" placeholder="A-10-L/94-A-7" [(ngModel)]="s"></ion-input>
+              </ion-item>
+
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>To Location</ion-label>
+                  <ion-input type="text" placeholder="B-07-G/45-L-2" [(ngModel)]="t"></ion-input>
+              </ion-item>
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>Dangerous Goods</ion-label>
+                  <!-- <ion-input type="text" placeholder="Not Regulated"></ion-input> -->
+                  <ion-select placeholder="Not Regulated" interface="popover" [(ngModel)]="u" >
+                      <ion-option value="Regulated"> Regulated</ion-option>
+                      <ion-option value="Not Regulated">Not Regulated</ion-option>
+                  </ion-select>
+                </ion-item>
+
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>Tank Selection</ion-label>
+                  <!-- <ion-input type="text" placeholder="Well Tank 14-36"></ion-input> -->
+                  <ion-select placeholder="Well Tank 14-36" interface="popover" [(ngModel)]="v">
+                      <ion-option value="Well Tank 14-36">Well Tank 14-36</ion-option>
+                      <ion-option value="Well Tank 17-38">Well Tank 17-38</ion-option>
+                  </ion-select>
+                </ion-item>
+
+
+              <ion-item class="secondry-content">
+                  <ion-label stacked>Requested By</ion-label>
+                  <!-- <ion-input type="text" placeholder="Daniel Carmier"></ion-input> -->
+                  <ion-select placeholder="Daniel Carmier" interface="popover" [(ngModel)]="w">
+                      <ion-option value="Daniel Carmier">Daniel Carmier</ion-option>
+                      <ion-option value="John Carmier">John Carmier</ion-option>
+                  </ion-select>
+                </ion-item>
+
+
+                <ion-item class="secondry-content">
+                    <ion-label stacked>Approoved By</ion-label>
+                    <!-- <ion-input type="text" placeholder="Big John Trucking"></ion-input> -->
+                    <ion-select placeholder="Big John Trucking" interface="popover" [(ngModel)]="x">
+                        <ion-option value="Big John Trucking">Big John Trucking</ion-option>
+                        <ion-option value="Big John Servicing">Big John Servicing</ion-option>
+                    </ion-select>
+                  </ion-item>
+
+
+                  <ion-item class="secondry-content">
+                      <ion-label stacked>Truck Type</ion-label>
+                      <!-- <ion-input type="text" placeholder="Body Type"></ion-input> -->
+                      <ion-select  placeholder="Body Type" interface="popover"  [(ngModel)]="y">
+                          <ion-option value="Body Type">Body Type</ion-option>
+                          <ion-option value="Body Free">Body Free</ion-option>
+                      </ion-select>
+                    </ion-item>
+
+
+                    <ion-item class="secondry-content">
+                        <ion-label stacked>Request Status</ion-label>
+                        <!-- <ion-input type="text" placeholder="Requeted"></ion-input> -->
+                        <ion-select placeholder="Requested" interface="popover" [(ngModel)]="z">
+                            <ion-option value="Requested">Requested</ion-option>
+                            <ion-option value="Not Requested">Not Requested</ion-option>
+                        </ion-select>
+                      </ion-item>
+
+                        <ion-item class="secondry-content">
+                            <ion-label stacked>Priority</ion-label>
+                            <!-- <ion-input type="text" placeholder="24 Hours"></ion-input> -->
+                            <ion-select placeholder="24 Hours" interface="popover" [(ngModel)]="z1">
+                                <ion-option value="24 Hours">24 Hours</ion-option>
+                                <ion-option value="48 Hours">48 Hours</ion-option>
+                            </ion-select>
+                          </ion-item>
+
+                          <ion-item class="secondry-content">
+                              <ion-label stacked>Date</ion-label>
+                              <ion-input type="text" placeholder="05/11/2018"></ion-input>
+                              <!-- <ion-select placeholder="05/11/2018"   interface="popover" [(ngModel)]="z2">
+                                <ion-option value="02/12/2018">02/12/2018</ion-option>
+                                <ion-option value="05/12/2018">06/12/2018</ion-option>
+                            </ion-select> -->
+                              <ion-icon name="md-calendar" item-right></ion-icon>
+                          </ion-item>
+                            
+                     </ion-col>
+                  </ion-row>
+<!-- 
+                  <ion-row>
+                      <ion-item class="secondry-content">
+                          <ion-label stacked>Date</ion-label>
+                          <ion-select placeholder="05/11/2018"   interface="popover">
+                            <ion-option value="10">10</ion-option>
+                            <ion-option value="20">20</ion-option>
+                        </ion-select>
+                        </ion-item>
+                  </ion-row> -->
+
+                 
+                 <div class="secondry-content">
+                  <ion-label floating>Comments...</ion-label> 
+                  <textarea class="inputWithIcon" id="textarea"  color="light" rows="1" cols="50" [(ngModel)]="z3"></textarea>
+                  <ion-icon  ios="ios-mic" md="md-mic" item-right></ion-icon>
+                </div>
+
+
+              <button ion-button icon-only clear outline item-right (click)="increaseProduct()">
+                  <ion-icon></ion-icon>
+                </button>
+              <button ion-button (click)="demo1()" color="primary">PRINT TICKETS</button>
+                          
+      </ion-grid>
+
+</ion-content>

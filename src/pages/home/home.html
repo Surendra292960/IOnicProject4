@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-header>
+  <ion-navbar color="dark">
+      <ion-title *ngIf="!isOn">
+          <button ion-button menuToggle="left" start>
+          <ion-icon name="menu"></ion-icon>Home
+        </button></ion-title>
+        <div id="search" class="search-button-star">
+      <ion-searchbar *ngIf="isOn" (ionInput)="getItems($event)" (ionCancel)="onCancel($event)" animated="true"></ion-searchbar>
+    </div>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="toggleDetails()">
+            <ion-icon name="search"></ion-icon>
+          </button>
+    </ion-buttons>
+
+    <button ion-button menuToggle="right" end>
+        <ion-icon name="menu"></ion-icon> 
+     </button>
+     
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+    Search List:
+    <ion-list>
+     <ion-item color="dark2" *ngFor="let item of items">
+       {{item}}
+     </ion-item>
+   </ion-list>
+   <h1>Helllo Hello</h1>
+
+   <h3>Ionic Menu Starter</h3>
+
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+  </p>
+
+  <button ion-button secondary menuToggle color="dark">Toggle Menu</button>
+</ion-content>

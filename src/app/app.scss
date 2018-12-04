@@ -1,0 +1,99 @@
+.background{
+    background: black;
+}
+
+.custom-avatar {
+    height: 20vw;
+    width: 20vw;
+    border: 10px solid #fff;
+    border-radius: 100%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .super-avatar {
+    height: 20vw;
+    width: 20vw;
+    color: #fff;
+    background: #fff;
+    //border: 10px solid #fff;
+   // border-radius: 0%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50px; right: 50px;
+  }
+
+  .scroll-content {
+    left: 5px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    background: rgb(77, 74, 74);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+}
+
+// .style-button{
+//     background: rgb(77, 74, 74);
+//     border-bottom: none;
+//     left:5px;
+//     right:0px;
+//     position:relative;
+// }
+ 
+.de11{
+   color: #fff;
+   font-weight: 100;
+   background: rgb(77, 74, 74);
+   border-bottom: none;
+   position: relative;
+   //padding-right: 150px;
+    //vertical-align: middle;
+    //text-align: center;
+
+}
+
+ion-menu{
+    ion-content{
+     background-color:rgb(77, 74, 74) !important;
+    // background: rgb(77, 74, 74);
+    }
+   }
+
+   .col{
+       padding:10px;
+       color:white;
+   }
+
+   .chkbox {
+    padding-left: 70px;
+  //  font-weight: 1px;
+    color: white;
+  }
+
+  .chkbox1{
+    padding-left: 135px;
+     font-weight: 1px;
+      color: white;
+  }
+
+  .text{
+    padding-left: 100px; 
+  }
+
+
+//   ion-menu {
+//     max-width: 20px!important;
+// }
+
+.split-pane-visible > ion-menu {
+    max-width: 304px!important;
+  }

@@ -1,0 +1,198 @@
+<div color="primary">
+<ion-menu color="dark" [content]="content">
+    <ion-header no-border>
+      <ion-toolbar color="dark2">
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item no-lines color="dark" class="de11" *ngFor="let p of pages" (click)="openPage(p)">
+            <ion-icon name={{p.icon}}></ion-icon> &nbsp;&nbsp;
+            {{p.title}}
+        </ion-item>
+      </ion-list>
+      <ion-footer>
+          <ion-list text-center>
+              <img src="assets/imgs/truck.png" class="super-avatar" item-right/>
+              <p style=" color: white;" absolute-drag>AITrucked App</p>
+              <p style=" color: white;" absolute-drag>v.0.9.1</p>
+            </ion-list>
+          </ion-footer> 
+    </ion-content>
+  </ion-menu>
+  <ion-menu [content]="content" color="dark" side="right" id="menu2">
+    <ion-header no-border color="dark">
+        <ion-toolbar color="dark2">
+            <ion-title></ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+          <ion-item no-lines color="dark" class="de11" *ngFor="let p of pages1" (click)="openPage(p)">
+              <ion-icon name={{p.icon}}></ion-icon> &nbsp;&nbsp;
+              {{p.title}}
+          </ion-item>
+        </ion-list>       
+      </ion-content>
+  </ion-menu>
+
+
+  <ion-menu [content]="content" color="dark" side="right" id="menu4">
+        <ion-header no-border color="dark">
+            <ion-toolbar color="dark2">               
+                  <button color="dark2" menuClose ion-item (click)="menu_close2(p)">
+                        <ion-icon name="md-close"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notifications
+                  </button>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-list>
+                    <ion-row>
+                        <ion-col>
+                            Do Not Disturb
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+                        <ion-row>
+                                <ion-col>
+                                   Sound
+                                </ion-col>
+                                <ion-col class="chkbox1">
+                                    Dring
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>
+                                    Vibrate
+                                </ion-col>
+                                <ion-col>
+                                    <ion-checkbox class="chkbox"></ion-checkbox>
+                                </ion-col>
+                    </ion-row>
+                </ion-list>
+            </ion-grid>
+        </ion-content>
+  </ion-menu>
+  
+
+
+
+
+
+  <ion-menu [content]="content" color="dark" side="right" id="menu3">
+        <ion-header no-border color="dark">
+            <ion-toolbar color="dark2">               
+                  <button color="dark2" menuClose ion-item (click)="menu_close(p)">
+                        <ion-icon name="md-close"></ion-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Settings
+                  </button>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-list>
+                    <ion-row>
+                        <ion-col>
+                            Signed in as
+                        </ion-col>
+                        <ion-col>
+                            Andrey  Spiridonov
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            Language 
+                        </ion-col>
+                        <ion-col class="text">
+                            English
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            Auto Sync
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            GPS
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col *ngFor="let p of pages2" (click)="openPage(p)">
+                            Notifications
+                        </ion-col>
+                        <ion-col>
+                            <ion-icon name="ios-arrow-forward-outline" class="chkbox"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            Show Hints
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            Allow Rotationy
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            App Sounds
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            24 Hour Clock
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            Show Distance in Km
+                        </ion-col>
+                        <ion-col>
+                                <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            Fingerprint Authorization
+                        </ion-col>
+                        <ion-col>
+                            <ion-checkbox class="chkbox"></ion-checkbox>
+                        </ion-col>
+                    </ion-row>
+                </ion-list>
+            </ion-grid>           
+          </ion-content>
+      </ion-menu>
+    <ion-nav color="dark" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+</div>
+
+
